@@ -1,0 +1,87 @@
+.dashboard-page { min-height: 100vh; background: #faf8fc; }
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px max(35px, calc((100% - 1180px) / 2));
+  background: white;
+  border-bottom: 1px solid #eee8f2;
+}
+
+.dashboard-brand { display: flex; align-items: center; gap: 11px; }
+.dashboard-brand-icon { display: grid; place-items: center; width: 43px; height: 43px; border-radius: 12px; background: #7861a7; color: white; }
+.dashboard-brand strong { display: block; color: #352a4d; font-size: 18px; }
+.dashboard-brand span { display: block; margin-top: 3px; color: #a296b4; font-size: 9px; letter-spacing: 1.5px; font-weight: 800; }
+
+.dashboard-logout {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 11px 15px;
+  border: 1px solid #e9e1ed;
+  border-radius: 10px;
+  background: white;
+  color: #746485;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.dashboard-logout:hover { background: #f6f0fa; }
+
+.dashboard-container { max-width: 1180px; margin: auto; padding: 45px 25px 70px; }
+.dashboard-welcome { margin-bottom: 30px; }
+.dashboard-tag { display: inline-flex; align-items: center; gap: 8px; color: #9878b4; font-size: 11px; font-weight: 800; letter-spacing: 1px; }
+.dashboard-welcome h1 { margin: 14px 0 10px; color: #352a4d; font-size: 32px; letter-spacing: -1px; }
+.dashboard-welcome h1 span { color: #c89dc8; }
+.dashboard-welcome p { color: #92869f; font-size: 13px; line-height: 1.7; }
+
+.dashboard-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  padding: 35px 42px;
+  border-radius: 20px;
+  background: linear-gradient(115deg, #67528f, #9c80bd);
+  color: white;
+}
+
+.dashboard-banner-tag { display: inline-flex; align-items: center; gap: 8px; color: #f3dff9; font-size: 10px; font-weight: 800; letter-spacing: 1px; }
+.dashboard-banner h2 { margin: 16px 0 11px; font-size: 26px; letter-spacing: -.6px; }
+.dashboard-banner p { max-width: 520px; color: #f0e6f7; font-size: 13px; line-height: 1.8; }
+.dashboard-banner-icon { display: grid; place-items: center; min-width: 140px; height: 140px; border: 1px solid #ffffff40; border-radius: 50%; background: #ffffff10; }
+
+.dashboard-status { display: inline-flex; align-items: center; gap: 8px; padding: 9px 12px; border-radius: 9px; background: #ffffff24; color: #fff; font-size: 12px; font-weight: 700; }
+.dashboard-section-title { margin: 34px 0 19px; color: #352a4d; font-size: 18px; }
+
+.dashboard-cards { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 17px; }
+.dashboard-card { min-width: 0; padding: 24px; border: 1px solid #eee7f1; border-radius: 16px; background: white; }
+.dashboard-card-icon { display: grid; place-items: center; width: 45px; height: 45px; margin-bottom: 20px; border-radius: 12px; }
+.dashboard-card-icon.violet { background: #f0eafa; color: #8466b2; }
+.dashboard-card-icon.pink { background: #fceef5; color: #c77ca3; }
+.dashboard-card-icon.green { background: #e8f8f0; color: #39a47d; }
+.dashboard-card-icon.blue { background: #ebf2ff; color: #6489cf; }
+.dashboard-card span, .dashboard-card small { display: block; color: #92869f; font-size: 12px; }
+.dashboard-card strong { display: block; margin: 10px 0; color: #352a4d; font-size: 21px; overflow-wrap: anywhere; }
+
+.dashboard-info { margin-top: 24px; padding: 28px; border: 1px solid #eee7f1; border-radius: 17px; background: white; }
+.dashboard-info-heading { display: flex; align-items: center; gap: 12px; margin-bottom: 25px; color: #8267aa; }
+.dashboard-info-heading h3 { margin: 0; color: #352a4d; font-size: 17px; }
+.dashboard-info-item { display: flex; align-items: center; gap: 14px; margin-top: 20px; }
+.dashboard-info-item > svg { flex-shrink: 0; color: #39a47d; }
+.dashboard-info-item strong { display: block; color: #51445f; font-size: 13px; }
+.dashboard-info-item span { display: block; margin-top: 5px; color: #9a8fa5; font-size: 12px; }
+
+@media (max-width: 950px) {
+  .dashboard-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 600px) {
+  .dashboard-header { padding: 18px 20px; }
+  .dashboard-container { padding: 30px 18px; }
+  .dashboard-welcome h1 { font-size: 26px; }
+  .dashboard-banner { padding: 28px 24px; }
+  .dashboard-banner-icon { display: none; }
+  .dashboard-cards { grid-template-columns: 1fr; }
+}
